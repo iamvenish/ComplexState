@@ -22,25 +22,29 @@ function App() {
     const { value, name } = event.target;
 
     setfullName((prevValue) => {
-      if (name === "fName") {
-        return {
-          fName: value,
-          lName: prevValue.lName,
-          Email: prevValue.Email,
-        };
-      } else if (name === "lName") {
-        return {
-          fName: prevValue.fName,
-          lName: value,
-          Email: prevValue.Email,
-        };
-      } else if (name === "Email") {
-        return {
-          fName: prevValue.fName,
-          lName: prevValue.lName,
-          Email: value,
-        };
-      }
+      // if (name === "fName") {
+      //   return {
+      //     fName: value,
+      //     lName: prevValue.lName,
+      //     Email: prevValue.Email,
+      //   };
+      // } else if (name === "lName") {
+      //   return {
+      //     fName: prevValue.fName,
+      //     lName: value,
+      //     Email: prevValue.Email,
+      //   };
+      // } else if (name === "Email") {
+      //   return {
+      //     fName: prevValue.fName,
+      //     lName: prevValue.lName,
+      //     Email: value,
+      //   };
+      // }
+      return {
+        ...prevValue,
+        [name]: value,
+      };
     });
   }
   return (
